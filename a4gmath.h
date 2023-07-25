@@ -4,9 +4,21 @@
 int factorial(int x)
 {
     int factX = x;
-    for (int i = x; i >= 2; i--)
+    //if the number is positive
+    if (factX > 0)
     {
-        factX = factX * (i - 1);
+        for (int i = x; i >= 2; i--)
+        {
+            factX = factX * (i - 1);
+        }
+    }
+    //if the number is negative
+    else
+    {
+        for (int i = x; i <= -2; i++)
+        {
+            factX = factX * (i + 1);
+        }
     }
     return factX;
 }
